@@ -1,0 +1,15 @@
+<form [formGroup]="contactForm" (ngSubmit)="handlerForm()">
+<input formControlName="name" placeholder="name">
+<br>
+<input formControlName="imageURL" placeholder="Image URL">
+<br>
+<input formControlName="price" placeholder="Price">
+<br>
+<input formControlName="description" placeholder="Description">
+<br>
+<button [disabled]="!contactForm.valid" type="submit">Enviar</button>
+</form>
+
+<div *ngFor="let product of products">
+<h1>{{product.name}}</h1>
+</div>
